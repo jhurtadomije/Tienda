@@ -1,7 +1,7 @@
 /*siguenos.css*/
 
 .siguenos {
-    background: linear-gradient(135deg, #b2f2bb, #ffc1a1); /* Fondo atractivo */
+    background: linear-gradient(135deg, #b2f2bb, #ffc1a1);
     padding: 5vh 2vw;
     display: flex;
     justify-content: center;
@@ -10,15 +10,15 @@
 
 .siguenos__contenido {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas: texto+iconos e imagen */
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    align-items: center; /* Alinea verticalmente el texto con la imagen */
-    max-width: 1200px;
+    align-items: center;
+    max-width: 75rem;
     width: 100%;
 }
 
 .siguenos__texto {
-    text-align: left; /* Asegura que el texto está alineado a la izquierda */
+    text-align: left;
 }
 
 .siguenos__texto p {
@@ -30,7 +30,7 @@
 
 .redes-sociales {
     display: flex;
-    gap: 1.5rem; /* Espaciado entre iconos */
+    gap: 1.5rem;
 }
 
 .redes-sociales a {
@@ -44,10 +44,10 @@
         transform: translateY(0);
     }
     40% {
-        transform: translateY(-10px);
+        transform: translateY(-0.625rem);
     }
     60% {
-        transform: translateY(-5px);
+        transform: translateY(-0.3125rem);
     }
 }
 .redes-sociales a:hover {
@@ -58,10 +58,10 @@
 
 .siguenos__imagen img {
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
     height: auto;
     border-radius: var(--borde-radio);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Suavizamos la imagen */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Suavizamos la imagen */
 }
 
 @media (max-width: 768px) {
@@ -71,17 +71,17 @@
     }
 
     .redes-sociales {
-        justify-content: center; /* Centrar los iconos */
+        justify-content: center;
     }
 }
 
 @media (max-width: 576px) {
     .siguenos__texto p {
-        font-size: 0.9rem; /* Reducir texto */
+        font-size: 0.9rem;
     }
 
     .redes-sociales a {
-        font-size: 1.5rem; /* Iconos más pequeños */
+        font-size: 1.5rem;
     }
 }
 
@@ -92,4 +92,3 @@
 .redes-sociales a {
     animation: zoomIn 1.5s ease-in-out;
 }
-
