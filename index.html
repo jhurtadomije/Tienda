@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
     <body>
-    <!-- Header -->
+        <!-- Header -->
         <header class="header">
             <div class="header__logo">
                 <img src="./imagenes/logo.webp" alt="Logo Tienda Online">
@@ -27,41 +27,39 @@
             </button>
         </header>
 
-    <!-- Modal de Inicio de Sesión -->
-    <div id="modalLogin" class="modal oculto">
-        <div class="modal-content">
-            <span class="modal-close" id="closeLogin">&times;</span>
-            <h2>Iniciar Sesión</h2>
-            <form id="formLogin" novalidate>
-                <label for="emailLogin">Correo electrónico:</label>
-                <input type="email" id="emailLogin" placeholder="Correo electrónico" required />
-                <label for="passwordLogin">Contraseña:</label>
-                <input type="password" id="passwordLogin" placeholder="Contraseña" required />
-                <button type="submit">Iniciar Sesión</button>
-                <p id="errorLogin" class="error-msg oculto">Credenciales incorrectas.</p>
-            </form>
+        <!-- Modal de Inicio de Sesión -->
+        <div id="modalLogin" class="modal oculto">
+            <div class="modal-content">
+                <span class="modal-close" id="closeLogin">&times;</span>
+                <h2>Iniciar Sesión</h2>
+                <form id="formLogin" novalidate>
+                    <label for="emailLogin">Correo electrónico:</label>
+                    <input type="email" id="emailLogin" placeholder="Correo electrónico" required />
+                    <label for="passwordLogin">Contraseña:</label>
+                    <input type="password" id="passwordLogin" placeholder="Contraseña" required />
+                    <button type="submit">Iniciar Sesión</button>
+                    <p id="errorLogin" class="error-msg oculto">Credenciales incorrectas.</p>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <!-- Modal de Registro -->
-    <div id="modalRegistro" class="modal oculto">
-        <div class="modal-content">
-            <span class="modal-close" id="closeRegistro">&times;</span>
-            <h2>Registro</h2>
-            <form id="formRegistro" novalidate>
-                <label for="emailRegistro">Correo electrónico:</label>
-                <input type="email" id="emailRegistro" placeholder="Correo electrónico" required />
-                <label for="passwordRegistro">Contraseña:</label>
-                <input type="password" id="passwordRegistro" placeholder="Contraseña" required />
-                <button type="submit">Registrarse</button>
-                <p id="errorRegistro" class="error-msg oculto">Error al registrar el usuario.</p>
-            </form>
+        <!-- Modal de Registro -->
+        <div id="modalRegistro" class="modal oculto">
+            <div class="modal-content">
+                <span class="modal-close" id="closeRegistro">&times;</span>
+                <h2>Registro</h2>
+                <form id="formRegistro" novalidate>
+                    <label for="emailRegistro">Correo electrónico:</label>
+                    <input type="email" id="emailRegistro" placeholder="Correo electrónico" required />
+                    <label for="passwordRegistro">Contraseña:</label>
+                    <input type="password" id="passwordRegistro" placeholder="Contraseña" required />
+                    <button type="submit">Registrarse</button>
+                    <p id="errorRegistro" class="error-msg oculto">Error al registrar el usuario.</p>
+                </form>
+            </div>
         </div>
-    </div>
 
-
-
-    <!-- Modal del carrito -->
+        <!-- Modal del carrito -->
         <div id="modal-carrito" class="modal" aria-hidden="true" role="dialog">
             <div class="modal-content">
                 <span id="cerrar-carrito" class="modal-close" aria-label="Cerrar carrito">&times;</span>
@@ -76,9 +74,7 @@
                 </div>
             </div>
         </div>
-
-
-
+        <!-- Seccion Hero -->
         <section class="hero">
             <!-- Gift de carga -->
             <div id="loading" class="loading oculto">
@@ -116,8 +112,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <!-- Síguenos -->
         <section class="siguenos">
