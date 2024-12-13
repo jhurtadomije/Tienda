@@ -1,0 +1,113 @@
+.header {
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    color: var(--color-texto);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.header__logo {
+    flex: 0 0 auto;
+    justify-items: center;
+}
+
+.header__logo img {
+    width: 10vw;
+    max-width: 200px;
+    min-width: 120px;
+}
+
+.header__nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-right: 20rem;
+    justify-content: flex-end;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__nav.activo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: var(--color-primario);
+    padding: 1rem;
+    border-radius: var(--borde-radio);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header__nav a {
+    font-size: var(--font-size-titulo);
+    color: var(--color-menu);
+    transition: color 0.3s ease;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.header__nav a:hover {
+    color: var(--color-hover);
+}
+
+.menu-hamburguesa {
+    display: none;
+    font-size: 2rem;
+    color: var(--color-menu);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-hamburguesa.activo {
+    transform: rotate(90deg);
+    color: var(--color-hover);
+}
+
+/* Responsividad */
+
+@media (max-width: 768px) {
+    .menu-hamburguesa {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1.2rem;
+    }
+
+    .header__nav {
+        display: none;
+
+    }
+
+    .header__nav.activo {
+        display: flex;
+        margin-right: auto;
+    }
+
+    .header__nav a {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--color-hover);
+    }
+
+    .header__logo img {
+        width: auto;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__nav {
+        width: 100vw;
+    }
+
+    .header__logo img {
+        max-width: 120px;
+    }
+}

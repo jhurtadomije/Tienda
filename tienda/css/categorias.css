@@ -1,0 +1,154 @@
+
+
+/* categorias.css */
+
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:wght@300;400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('estilos.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('modal.css');
+@import url('productos.css');
+
+/* Estilos de la cuadrícula de categorías */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+/* Estilos de cada tarjeta de categoría */
+.categoria-card {
+    background: var(--color-fondo);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.categoria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.categoria-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.categoria-card h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.categoria-card .btn-ver-productos {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--color-boton);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+.categoria-card .btn-ver-productos:hover {
+    background: var(--color-hover);
+}
+
+/* Notificación */
+.notificacion {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--color-boton);
+    color: var(--color-fondo);
+    padding: 1rem;
+    border-radius: var(--borde-radio);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease, fadeOut 0.3s 2.7s ease forwards;
+}
+
+/* Elementos ocultos */
+.oculto {
+    display: none;
+}
+
+/* Cargando */
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 1rem;
+
+}
+
+.loading img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .categorias-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .categoria-card {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-card img {
+        height: 120px;
+    }
+}
+
+
+.categorias-grid {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.categoria-card {
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+
