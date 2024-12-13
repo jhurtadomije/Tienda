@@ -1,0 +1,95 @@
+/*siguenos.css*/
+
+.siguenos {
+    background: linear-gradient(135deg, #b2f2bb, #ffc1a1); /* Fondo atractivo */
+    padding: 5vh 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.siguenos__contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: texto+iconos e imagen */
+    gap: 2rem;
+    align-items: center; /* Alinea verticalmente el texto con la imagen */
+    max-width: 1200px;
+    width: 100%;
+}
+
+.siguenos__texto {
+    text-align: left; /* Asegura que el texto está alineado a la izquierda */
+}
+
+.siguenos__texto p {
+    font-size: var(--font-size-texto);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--color-texto);
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 1.5rem; /* Espaciado entre iconos */
+}
+
+.redes-sociales a {
+    font-size: 2rem;
+    color: var(--color-secundario);
+    transition: color 0.3s ease;
+}
+/* Efecto de rebote */
+@keyframes rebote {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.redes-sociales a:hover {
+    color: var(--color-hover);
+    transform: rotate(15deg) scale(1.2);
+    animation: rebote 0.6s ease-in-out;
+}
+
+.siguenos__imagen img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--borde-radio);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Suavizamos la imagen */
+}
+
+@media (max-width: 768px) {
+    .siguenos__contenido {
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center;
+    }
+
+    .redes-sociales {
+        justify-content: center; /* Centrar los iconos */
+    }
+}
+
+@media (max-width: 576px) {
+    .siguenos__texto p {
+        font-size: 0.9rem; /* Reducir texto */
+    }
+
+    .redes-sociales a {
+        font-size: 1.5rem; /* Iconos más pequeños */
+    }
+}
+
+.siguenos {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.redes-sociales a {
+    animation: zoomIn 1.5s ease-in-out;
+}
+

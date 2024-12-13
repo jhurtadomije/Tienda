@@ -1,0 +1,50 @@
+/*ofertas.css*/
+
+.ofertas {
+    background: linear-gradient(135deg, #b2f2bb, #fef6e4);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: var(--borde-radio); /* Redondeamos los bordes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Suavizamos el contenedor */
+}
+
+.ofertas h2 {
+    font-size: var(--font-size-titulo);
+    margin-bottom: 1rem;
+}
+
+.ofertas p {
+    font-size: var(--font-size-texto);
+    margin-bottom: 2rem;
+}
+
+.ofertas form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ofertas input {
+    padding: 0.75rem;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid var(--color-primario);
+    border-radius: var(--borde-radio);
+}
+
+.ofertas button {
+    padding: 0.75rem 2rem;
+    font-size: var(--font-size-texto);
+    border: none;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    border-radius: var(--borde-radio);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ofertas button:hover {
+    background-color: var(--color-hover);
+}

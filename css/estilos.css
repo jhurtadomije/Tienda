@@ -1,0 +1,125 @@
+/* estilos.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('header.css');
+@import url('hero.css');
+@import url('siguenos.css');
+@import url('ofertas.css');
+@import url('modal.css');
+@import url('footer.css');
+
+/* Variables globales */
+
+    :root {
+        --color-primario: #ffc1a1;
+        --color-secundario: #ffb5e8;
+        --color-texto: #5b5b5b;
+        --color-fondo: #fef6e4;
+        --color-menu: #856D8C;
+        --color-boton: #72a7df;
+
+        --color-hover:  #FFD1DC;
+
+        --font-principal: 'Montserrat', sans-serif;
+        --font-secundaria: 'Roboto', sans-serif;
+
+        --espaciado: 1rem;
+        --borde-radio: 0.5rem;
+
+        --font-size-base: 1rem; /* Base para texto */
+        --font-size-titulo: 1.5rem; /* Títulos */
+        --font-size-subtitulo: 1.5rem; /* Subtítulos */
+        --font-size-texto: 1rem; /* Texto principal */
+        --font-size-pequeno: 0.875rem; /* Texto pequeño */
+        }
+
+
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secundaria), sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-principal), sans-serif;
+    color: var(--color-texto);
+}
+
+
+/* Estilos del GIF de carga */
+.oculto {
+    display: none;
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loading img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+/* Animaciones globales */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
