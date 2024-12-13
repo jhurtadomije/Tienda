@@ -6,10 +6,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: var(--borde-radio);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
     width: 90%;
-    max-width: 500px;
+    max-width: 31.25rem;
     z-index: 1000;
     display: none;
 }
@@ -19,34 +19,40 @@
     padding: 2rem;
     border-radius: var(--borde-radio);
     width: 90%;
-    max-width: 500px;
+    max-width: 31.25rem;
     text-align: center;
     position: relative;
 }
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.625rem;
+    right: 0.625rem;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 /* Lista de productos en el carrito */
 #carrito-items {
-    max-height: 200px;
+    max-height: 20rem;
     overflow-y: auto;
     margin: 1rem 0;
     padding: 0;
     list-style: none;
 }
 #carrito-items li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--color-primario);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border: 0.0625rem solid var(--color-primario);
+    border-radius: var(--borde-radio);
+    background-color: var(--color-fondo);
+    gap: 1rem;
 }
 
 #carrito-items li:last-child {
-    border-bottom: 1px solid var(--color-primario);
+    border-bottom: 0.0625rem solid var(--color-primario);
 }
 
 .modal-footer {
@@ -70,7 +76,7 @@
     background-color: var(--color-hover);
 }
 
-.modal.activo{
+.modal.activo {
     display: block;
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -80,7 +86,7 @@
     background-color: var(--color-fondo);
     padding: 2rem;
     border-radius: var(--borde-radio);
-    text-align: left; /* Detalles suelen estar alineados a la izquierda */
+    text-align: left;
 }
 
 #modal-detalles img {
@@ -95,57 +101,64 @@
 #modal-detalles input[type="number"] {
     margin-top: 0.5rem;
     padding: 0.5rem;
-    border: 1px solid var(--color-primario);
+    border: 0.0625rem solid var(--color-primario);
     border-radius: var(--borde-radio);
 }
+
 #vaciar-carrito {
-    background-color: var(--color-boton); /* Botón secundario */
+    background-color: var(--color-boton);
+    color: var(--color-fondo);
+    border-radius: var(--borde-radio);
 }
 
 #vaciar-carrito:hover {
-    background-color: var(--color-hover); /* Hover para botón secundario */
-}
-
-#finalizar-compra {
-    background-color: var(--color-boton); /* Botón principal */
-}
-
-#finalizar-compra:hover {
-    background-color: var(--color-hover); /* Hover para botón principal */
-}
-#modal-detalles button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--color-primario);
-    color: var(--color-fondo);
-    border: none;
-    border-radius: var(--borde-radio);
-    cursor: pointer;
-}
-
-#modal-detalles button:hover {
     background-color: var(--color-hover);
 }
 
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
+#finalizar-compra {
+    background-color: var(--color-boton);
+    color: var(--color-fondo);
+    border-radius: var(--borde-radio);
 }
 
-@media (max-width: 576px) {
-    .modal-content {
-        max-width: 90%;
-        padding: 1.5rem;
+#finalizar-compra:hover {
+    background-color: var(--color-hover);
+
+    #modal-detalles button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--color-primario);
+        color: var(--color-fondo);
+        border: none;
+        border-radius: var(--borde-radio);
+        cursor: pointer;
     }
-    #carrito-items {
-        max-height: 150px;
+
+    #modal-detalles button:hover {
+        background-color: var(--color-hover);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -60%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .modal-content {
+            max-width: 90%;
+            padding: 1.5rem; /* 24px */
+        }
+
+        #carrito-items {
+            max-height: 9.375rem; /* 150px */
+        }
+
     }
 }
 
