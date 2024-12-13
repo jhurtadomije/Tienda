@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Categorías</title>
+        <link rel="stylesheet" href="css/categorias.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="imagenes/logo.webp" alt="Logo Tienda Online">
+            </div>
+
+            <nav class="header__nav" id="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="#" id="abrir-carrito"><i class="fas fa-shopping-cart"></i> Carrito</a>
+            </nav>
+            <button id="menu-hamburguesa" class="menu-hamburguesa" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+
+        <!-- gift de carga -->
+        <div id="loading" class="loading oculto">
+            <img src="imagenes/cargando.gif" alt="Cargando">
+        </div>
+
+        <!-- Modal del Carrito -->
+        <div id="modal-carrito" class="modal" aria-hidden="true" role="dialog">
+            <div class="modal-content">
+                <span id="cerrar-carrito" class="modal-close" aria-label="Cerrar carrito">&times;</span>
+                <h2>Tu Carrito</h2>
+                <ul id="carrito-items">
+                    <!-- Los productos se agregarán dinámicamente aquí -->
+                </ul>
+                <div class="modal-footer">
+                    <p id="carrito-total">Total: 0 €</p>
+                    <button id="vaciar-carrito" class="btn btn-secundario">Vaciar Carrito</button>
+                    <button id="finalizar-compra" class="btn btn-primario">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal para Detalles del Producto -->
+        <div id="modal-detalles" class="modal oculto">
+            <div class="modal-content">
+                <button id="cerrar-modal" class="modal-close">&times;</button>
+                <img id="modal-imagen" src="" alt="Imagen del producto">
+                <h2 id="modal-titulo">Título del producto</h2>
+                <p id="modal-descripcion">Descripción del producto</p>
+                <p id="modal-precio">Precio: €</p>
+                <label for="modal-cantidad">Cantidad:</label>
+                <input id="modal-cantidad" type="number" min="1" value="1">
+                <button id="modal-agregar-carrito">Añadir al carrito</button>
+            </div>
+        </div>
+
+
+
+        <!-- Sección Productos -->
+        <main class="productos">
+            <h1>Categorías</h1> <!-- Cambia dinámicamente según la vista -->
+            <div class="categorias-grid" id="productos-grid">
+                <!-- Categorías o productos cargados dinámicamente -->
+            </div>
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__seccion">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer__seccion">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer__seccion">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer__seccion">
+                <h3>Métodos de pago</h3>
+                <ul>
+                    <li><img src="imagenes/visa.png" alt="Visa"></li>
+                    <li><img src="imagenes/matercard.png" alt="Mastercard"></li>
+                    <li><img src="imagenes/paypal.png" alt="PayPal"></li>
+                </ul>
+            </div>
+        </footer>
+
+
+    <script type="module" src="./js/categorias.js"></script>
+    </body>
+</html>
