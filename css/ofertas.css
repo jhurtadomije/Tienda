@@ -5,8 +5,8 @@
     color: var(--color-texto);
     text-align: center;
     padding: 3rem 1rem;
-    border-radius: var(--borde-radio); /* Redondeamos los bordes */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Suavizamos el contenedor */
+    border-radius: var(--borde-radio);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .ofertas h2 {
@@ -29,7 +29,7 @@
 .ofertas input {
     padding: 0.75rem;
     width: 80%;
-    max-width: 400px;
+    max-width: 25rem;
     border: 1px solid var(--color-primario);
     border-radius: var(--borde-radio);
 }
