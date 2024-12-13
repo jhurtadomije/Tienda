@@ -1,6 +1,8 @@
+/*Footer.css*/
+
 .footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     gap: 1rem;
     background: linear-gradient(135deg, #ffc1a1, #fef6e4);
     color: var(--color-texto);
@@ -35,7 +37,7 @@
     }
 }
 .footer__seccion ul li img {
-    width: 40px;
+    width: 2.5rem;
     vertical-align: middle;
     transition: transform 0.3s ease;
     animation: aparecer 0.5s ease-in-out;
@@ -44,7 +46,6 @@
     transform: scale(1.2) rotate(10deg); /* Escala y ligera rotación */
     transition: transform 0.3s ease-in-out; /* Controla la transición */
 }
-
 
 .footer__seccion ul li a {
     text-decoration: none;
@@ -64,13 +65,13 @@
     }
 
     .footer__seccion {
-        margin-bottom: 1rem; /* Espacio entre secciones */
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width: 576px) {
     .footer__seccion ul li {
-        font-size: 0.8rem; /* Reducir tamaño del texto */
+        font-size: 0.8rem;
     }
 }
 
