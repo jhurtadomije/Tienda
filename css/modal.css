@@ -152,13 +152,14 @@
     @media (max-width: 576px) {
         .modal-content {
             max-width: 90%;
-            padding: 1.5rem; 
+            padding: 1.5rem; /* 24px */
         }
 
         #carrito-items {
-            max-height: 9.375rem; 
+            max-height: 9.375rem; /* 150px */
         }
 
     }
 }
+
 
