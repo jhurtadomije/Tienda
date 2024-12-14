@@ -33,3 +33,7 @@ LocalStorage: Persistencia del carrito de compras.
 API Externa: Platzi Fake Store API
 
 Para obtener categorías y productos.
+
+Para ver el proyecto en funcionamiento, basta con seguir este
+
+enlace: https://jhurtadomije.github.io/Tienda/
